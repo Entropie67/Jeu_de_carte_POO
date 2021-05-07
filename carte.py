@@ -15,6 +15,3 @@ class Carte:
         forme_couleur = {"coeur": "\u2665", "trèfle": "\u2663", "carreau": "\u2666", "pique": "\u2660"}
         return f"{self.hauteur}{forme_couleur[self.couleur]}"
 
-
-carte = Carte("carreau", "R")
-print(carte)
