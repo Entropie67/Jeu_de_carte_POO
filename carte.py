@@ -3,7 +3,7 @@ class Carte:
 
     def __init__(self, couleur, hauteur):
         if couleur not in {"coeur", "trèfle", "carreau", "pique"}:
-            raise ValueError("Les cartes ne peuvent qu'être de typte coeur, trèfle, carreau ou pique")
+            raise ValueError("Les cartes ne peuvent qu'être de type coeur, trèfle, carreau ou pique")
         else:
             self.couleur = couleur
         if hauteur not in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "V", "D", "R"}:
