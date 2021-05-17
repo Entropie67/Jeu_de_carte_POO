@@ -32,8 +32,15 @@ class Bataille:
         self._bataille()
 
     def _bataille(self):
-        pass
 
+        carte_1 = self.liste_joueurs[0].main[1]
+        carte_2 = self.liste_joueurs[1].main[1]
+        print(f"{self.liste_joueurs[0].nom} pose la carte {carte_1}")
+        self.liste_joueurs[0].pose_carte(self.liste_joueurs[0].main[1])
+        print(f"{self.liste_joueurs[1].nom} pose la carte {carte_2}")
+        self.liste_joueurs[1].pose_carte(self.liste_joueurs[1].main[1])
+
+        print(f"{carte_1} VS {carte_2}")
 
 
 
@@ -41,3 +48,4 @@ class Bataille:
 partie = Bataille(2)
 print(partie)
 partie.start()
+

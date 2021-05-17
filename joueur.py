@@ -18,3 +18,5 @@ class Joueur:
 
     def ramasse_carte(self, liste_cartes):
         self.main.extend(liste_cartes)
+
+
