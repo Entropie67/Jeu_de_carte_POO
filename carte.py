@@ -36,10 +36,19 @@ class Carte:
             return False
 
     def __lt__(self, other):
-        """Strictement inférieur"""
+        """carte strictement inférieure à other"""
+        if self.valeur() < other.valeur():
+            return True
+        else:
+            return False
 
     def __gt__(self, other):
         """Strictement inférieur"""
+        if self.valeur() > other.valeur():
+            return True
+        else:
+            return False
+
 carte = Carte("coeur", "D")
 carte2 = Carte("coeur", "R")
 print(carte)

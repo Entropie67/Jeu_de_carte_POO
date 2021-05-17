@@ -17,6 +17,7 @@ class Joueur:
         self.main.remove(carte)
 
     def ramasse_carte(self, liste_cartes):
+        print(f"Le pli est {list(map(str,liste_cartes))}")
         self.main.extend(liste_cartes)
 
 
