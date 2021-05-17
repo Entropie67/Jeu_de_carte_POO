@@ -1,5 +1,6 @@
 from deck import Deck
 from joueur import Joueur
+
 class Bataille:
     """classe modélisant une partie de bataille fermée"""
 
@@ -21,5 +22,22 @@ class Bataille:
         r = " - ".join([j.nom for j in self.liste_joueurs])
         return f" Partie de bataille fermée opposant les joureurs : \n {r}"
 
+    def start(self):
+        paquet = Deck()
+        paquet.melange()
+        nb_carte = len(paquet)//2
+        for joueur in self.liste_joueurs:
+            joueur.donne_main(paquet, nb_carte)
+            print(joueur)
+        self._bataille()
+
+    def _bataille(self):
+        pass
+
+
+
+
+
 partie = Bataille(2)
 print(partie)
+partie.start()

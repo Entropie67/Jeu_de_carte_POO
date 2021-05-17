@@ -10,15 +10,11 @@ class Joueur:
         main = " - ".join(list(map(str, self.main)))
         return f"Le joueur : {self.nom} \n possède les cartes : {main}"
 
-    def donne_main(self, deck):
-        self.main = deck.donne_carte(5)
+    def donne_main(self, deck, n):
+        self.main = deck.donne_carte(n)
 
+    def pose_carte(self, carte):
+        self.main.remove(carte)
 
-
-
-jeu = Deck()
-joueur = Joueur("Albert")
-print(joueur)
-jeu.melange()
-joueur.donne_main(jeu)
-print(joueur)
+    def ramasse_carte(self, liste_cartes):
+        self.main.extend(liste_cartes)

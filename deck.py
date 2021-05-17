@@ -17,6 +17,9 @@ class Deck:
     def __str__(self):
         return " - ".join(list(map(str, self.cartes)))
 
+    def __len__(self):
+        return len(self.cartes)
+
     def melange(self):
         """ Méthode pour mélanger un paquet"""
         shuffle(self.cartes)
@@ -25,7 +28,3 @@ class Deck:
         """Donne les n cartes du haut du paquet"""
         return [self.cartes.pop() for _ in range(n)]
 
-paquet = Deck()
-print(paquet)
-paquet.melange()
-print(paquet)
